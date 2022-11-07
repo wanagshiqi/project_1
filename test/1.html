@@ -1,0 +1,69 @@
+<!--
+ * @Date: 2022-11-07 10:20:13
+ * @LastEditors: 十柒
+ * @LastEditTime: 2022-11-07 10:20:18
+ * @FilePath: \test\1.html
+ * 
+ * Copyright (c) 2022 by wangshiqi 2387314068@qq.com, All Rights Reserved. 
+-->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="http://www.softwhy.com/" />
+    <title>web前端开发学习q群：767273102 技术分享，欢迎基础小伙伴</title>
+    <style type="text/css">
+        #myheart {
+            position: relative;
+            width: 150px;
+            height: 220px;
+        }
+        
+        #myheart:before,
+        #myheart:after {
+            position: absolute;
+            left: 100px;
+            background: red;
+            height: 160px;
+            width: 100px;
+            content: "";
+            border-radius: 50px 50px 0 0;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+        
+        #myheart:after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
+        
+        @keyframes heart {
+            0% {
+                -webkit-transform: scale(1);
+            }
+            50% {
+                -webkit-transform: scale(0.8);
+            }
+            100% {
+                -webkit-transform: scale(1);
+            }
+        }
+        
+        .myheart {
+            position: absolute;
+            top: 40%;
+            left: 40%;
+            animation: heart 1.5s linear infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="myheart">
+        <div id="myheart"></div>
+    </div>
+</body>
+
+</html>
